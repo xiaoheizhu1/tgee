@@ -6992,12 +6992,12 @@ input[type=radio]:checked:before {
     text-shadow: -1px 0 #00a7e0
 }
 
-.glitch:hover:before {
+.glitch:before {
     text-shadow: 4px 0 #ff3f1a;
     animation: glitch-loop-1 .8s infinite ease-in-out alternate-reverse
 }
 
-.glitch:hover:after {
+.glitch:after {
     text-shadow: -5px 0 #00a7e0;
     animation: glitch-loop-2 .8s infinite ease-in-out alternate-reverse
 }
@@ -8816,3 +8816,89 @@ h1[id*=toc-head]::before,h2[id*=toc-head]::before,h3[id*=toc-head]::before,h4[id
 .bangumi-next i {
     color: orange;
 }
+
+#banner_wave_1 {
+    width: auto;
+    height: 65px;
+    background: url(https://cdn.jsdelivr.net/gh/xiaoheizhu1/imgHosting/PIC/wave1.png) repeat-x;
+    _filter: alpha(opacity=80);
+    position: absolute;
+    bottom: 0;
+    width: 400%;
+    left: -236px;
+    z-index: 5;
+    opacity: 1;
+    transiton-property: opacity,bottom;
+    transition-duration: .4s,.4s;
+    animation-name: move2;
+    animation-duration: 240s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#banner_wave_2 {
+    width: auto;
+    height: 80px;
+    background: url(https://cdn.jsdelivr.net/gh/xiaoheizhu1/imgHosting/PIC/wave2.png) repeat-x;
+    _filter: alpha(opacity=80);
+    position: absolute;
+    bottom: 0;
+    width: 400%;
+    left: 0;
+    z-index: 4;
+    opacity: 1;
+    transiton-property: opacity,bottom;
+    transition-duration: .4s,.4s;
+    animation-name: move2;
+    animation-duration: 160s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+ 
+@keyframes move1 {
+  100%{
+    background-position: 100% 0;
+  }
+}
+ 
+@keyframes move2 {
+  100%{
+    background-position: -100% 0;
+  }
+}
+
+ /*首页一句话逗号*/
+.faa-flash.animated, .faa-flash.animated-hover:hover, .faa-parent.animated-hover:hover&gt;.faa-flash {
+    -webkit-animation: flash 2s ease infinite;
+    animation: flash 2s ease infinite;
+}
+.faa-flash.animated, .faa-flash.animated-hover:hover, .faa-parent.animated-hover:hover&gt;.faa-flash {
+    -webkit-animation: flash 2s ease infinite;
+    animation: flash 2s ease infinite;
+}
+
+/*侧边条*/
+
+.post-list-thumb:after {
+	content: '　';
+	width: 4px;
+	height: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #ff69b4;
+	box-shadow: 0 0 6px #ff69b4;
+	border-radius: 10px;
+	transition: 1.5s all;
+}
+
+.post-list-thumb-left:after {
+	right: 0;
+	left: auto;
+}
+.post-list-thumb:hover:after {
+	height: 100%;
+}
+
+ 
